@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI in Action — session hub | Turing College × Women In Tech UK</title>
+<meta name="description" content="Everything from the AI in Action workshop (7 July 2026, London): the prompts, the icebreaker, the build story, and where to go next.">
+<meta property="og:title" content="AI in Action: See It, Try It, Use It Tomorrow">
+<meta property="og:description" content="The session hub: every prompt we used, the app build story, and what to try tomorrow.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jaikharbanda.github.io/ai-in-action/">
+<meta property="og:image" content="https://jaikharbanda.github.io/ai-in-action/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAACi0lEQVR42mP00IpgGMqAiWGIg1EPjHpg1AOjHhj1wKgHRj0w6oGR7AEWMvQwMzMvPTCNX4gPTTzVp/jJ/We4dOmZanUuqEUWmVg/a8ea/QMQA6Z2BpiuZ2BgcPazHRpJyNnfDqu4k68NIyPjYPcADx+3ub0hVikxSRE9M63B7gF7LytWNlZcsi44ImcQecAFNaFfv3AbmWvtasbByT54PSCtIKmhr4osMrlxzuePX+BcTi4Oa1ezwesBtOB/cOvx/VuPju4+PYBlEQkeYGRkdPJFcdzB7cfgJBwYmOuIiAsNRg/omWqJSYkgixzacYKBgeHS6Wsf3n1C+JMJ3Z+DxQPO/ijOun31/rNHLxgYGP79/Xdk50nUsmjweYCdg90GNXce2nEckZaQ2AwMDLJK0qraSoPLA9auppzcnLg8cPXcjbev3qNEQoDd4PKAsx+Kg25cvP3q2Rs49/+//4d3nkBW4OBpxcLCPFhao8LiQoYWOsgiGvqq268ux6OFT5DX1N7w+N4zgyIGnHxsGJlIbqW5+NkNliREXt1kZm/IJ8Az8B5Q1VaSV5EhJ3Wysth7Wg18HkBrYP7+9TvCNv3bl+9YFU9e3aaipYjcc9i8fNdAxgALC7O9pyWyyKlD53G5noGB4eB2lApBXVdZVlFqID1gameI1ns8sPUYHvUHtx37//8/Md03OnkArfnw/duPU4fO41H/+sXb6xduofczmWjYz2QcnSMbguNCtAD7js9ESXiW6UMmCaE5nVRvDKQH8DideG8wDXLXE1Q5OjpN4+AnqH40Bmgf/Ph1jcbAqAdGPUB3QHw7hxhdozFAl0jAo340BmgfCfhVjvYHRntkoxXZqAdGPTDqgSENAEbZuil+CiqBAAAAAElFTkSuQmCC">
+<style>
+:root { --purple:#482A58; --ink:#2A1836; --tint:#F3EDF7; --cream:#FDFAF4; --cyan:#06F1F1; --rust:#8F4D23; }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color:var(--ink); background:#fff; line-height:1.55; }
+.wrap { max-width:720px; margin:0 auto; padding:0 20px; }
+.hero { background:var(--purple); color:var(--cream); padding:44px 0 36px; }
+.hero .brand { font-size:12px; letter-spacing:.22em; font-weight:700; text-transform:uppercase; opacity:.9; }
+.hero h1 { color:#fff; font-size:44px; line-height:1.1; margin:14px 0 6px; }
+.hero .tag { color:var(--cyan); font-size:20px; font-weight:700; margin-bottom:18px; }
+.badge { display:inline-block; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.25);
+  border-radius:999px; padding:6px 14px; font-size:14px; margin:2px 6px 2px 0; }
+.scanbox { display:flex; gap:16px; align-items:center; background:#fff; color:var(--ink);
+  border-radius:14px; padding:14px 16px; margin-top:22px; }
+.scanbox img { width:92px; height:92px; }
+.scanbox .u { font-weight:700; color:var(--rust); word-break:break-all; }
+.quick { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:-18px auto 0; }
+.quick a { background:var(--tint); border-radius:12px; padding:14px 10px; text-align:center;
+  text-decoration:none; color:var(--purple); font-weight:700; font-size:14px;
+  box-shadow:0 3px 10px rgba(42,24,54,.12); }
+section { padding:34px 0 6px; }
+h2 { font-size:26px; color:var(--purple); margin-bottom:12px; }
+h3 { font-size:17px; margin:18px 0 6px; }
+p { margin-bottom:10px; }
+.card { background:var(--tint); border-radius:14px; padding:18px; margin:14px 0; }
+.card.dark { background:var(--purple); color:var(--cream); }
+.card.dark h3 { color:#fff; margin-top:0; }
+pre { white-space:pre-wrap; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:13.5px; background:#fff; border:1px solid #E4DCEA; border-radius:10px; padding:14px; margin:10px 0; }
+.copybtn { background:var(--purple); color:#fff; border:0; border-radius:8px; padding:8px 14px;
+  font-size:13px; font-weight:700; cursor:pointer; }
+.copybtn.copied { background:var(--rust); }
+.qa { border:1px solid #E4DCEA; border-radius:12px; margin:12px 0; overflow:hidden; }
+.qa .pair { display:grid; grid-template-columns:1fr 1fr; gap:0; }
+.qa .opt { padding:14px; font-size:14px; }
+.qa .opt + .opt { border-left:1px solid #E4DCEA; }
+.qa .opt b { color:var(--purple); }
+.qa .rev { display:block; width:100%; border:0; background:var(--tint); color:var(--purple);
+  font-weight:700; padding:10px; cursor:pointer; font-size:14px; }
+.qa .ans { display:none; padding:12px 14px; background:#FFF8E8; font-size:14px; }
+.two { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.two .card { margin:0; }
+.course { border:1px solid #E4DCEA; border-radius:14px; padding:18px; margin:12px 0; }
+.course .fund { color:var(--rust); font-weight:700; font-size:13px; }
+.btn { display:inline-block; background:var(--purple); color:#fff; text-decoration:none;
+  border-radius:10px; padding:10px 18px; font-weight:700; font-size:14px; margin:8px 8px 0 0; }
+.btn.ghost { background:transparent; color:var(--purple); border:2px solid var(--purple); }
+.about { display:flex; gap:18px; align-items:flex-start; flex-wrap:wrap; }
+.about img { width:110px; height:110px; border:1px solid #E4DCEA; border-radius:10px; }
+footer { margin-top:40px; padding:26px 0 40px; background:var(--purple); color:var(--cream); font-size:13px; }
+footer a { color:var(--cyan); }
+@media (max-width:560px) {
+  .hero h1 { font-size:34px; }
+  .quick { grid-template-columns:1fr; }
+  .two, .qa .pair { grid-template-columns:1fr; }
+  .qa .opt + .opt { border-left:0; border-top:1px solid #E4DCEA; }
+}
+</style>
+</head>
+<body>
+
+<div class="hero"><div class="wrap">
+  <div class="brand">Turing College &times; Women In Tech UK</div>
+  <h1>AI in Action.</h1>
+  <div class="tag">See it. Try it. Use it tomorrow.</div>
+  <span class="badge">Tuesday 7 July 2026</span>
+  <span class="badge">18:00 &ndash; 20:30</span>
+  <span class="badge">41 Luke St, London EC2A 4DP</span>
+  <div class="scanbox">
+    <img src="data:image/png;base64,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IklAiCQBIZIEhEgSECJJQMib3dt3nEhem9quPbX1+Y7z2c095WtTE9hT0+rnfldOSUCIJAEhkgSESBIQIklAiCQBIZIEhEgSECJJQMib6e21O+45XmvOwu5obhNvTrrvXPmc5vue+204JQEhkgSESBIQIklAiCQBIZIEhEgSECJJQIgkASFb09trU7O/O6b2WDd3nE/t7Z4ytWt86tvf+bznfs9OSUCIJAEhkgSESBIQIklAiCQBIZIEhEgSECJJQMjB6W3+7nmzzms7n3dnMnhqirr5Pwqm7NyVUxIQIklAiCQBIZIEhEgSECJJQIgkASGSBIRIEhBievsb5zYKT+11Xmtu125uMZ96Vnf8vDtXdkoCQiQJCJEkIESSgBBJAkIkCQiRJCBEkoAQSQJCDk5vN7cC75j6ROakv/99m89q58pr59733Pe75pQEhEgSECJJQIgkASGSBIRIEhAiSUCIJAEhkgSEbE1vT813Tnne/K456e+/8h2/3zu+r1MSECJJQIgkASGSBIRIEhAiSUCIJAEhkgSESBIQ8rqua/oeAP7klASESBIQIklAiCQBIZIEhEgSECJJQIgkASGSBIT8AWJTutOMpZCeAAAAAElFTkSuQmCC" alt="QR code for this page">
+    <div>Viewing this on the big screen? Scan to open it on your phone, or type
+    <span class="u">jaikharbanda.github.io/ai-in-action</span> into any browser.</div>
+  </div>
+  <a class="btn ghost" style="color:var(--cream);border-color:var(--cream);margin-top:16px"
+     href="data:text/calendar;base64,QkVHSU46VkNBTEVOREFSDQpWRVJTSU9OOjIuMA0KUFJPRElEOi0vL1R1cmluZ0NvbGxlZ2UvL0FJaW5BY3Rpb24vL0VODQpCRUdJTjpWRVZFTlQNClVJRDphaS1pbi1hY3Rpb24tMjAyNjA3MDdAamFpa2hhcmJhbmRhLmdpdGh1Yi5pbw0KRFRTVEFNUDoyMDI2MDcwMlQxOTAwMDBaDQpEVFNUQVJUOjIwMjYwNzA3VDE3MDAwMFoNCkRURU5EOjIwMjYwNzA3VDE5MzAwMFoNClNVTU1BUlk6QUkgaW4gQWN0aW9uOiBTZWUgSXRcLCBUcnkgSXRcLCBVc2UgSXQgVG9tb3Jyb3cNCkxPQ0FUSU9OOjQxIEx1a2UgU3RcLCBMb25kb24gRUMyQSA0RFANCkRFU0NSSVBUSU9OOldvcmtzaG9wIHdpdGggSmFpIEtoYXJiYW5kYSAoQm9vbSBUcmFpbmluZyAvIFR1cmluZyBDb2xsZWdlKSBhbmQgUHVsYXEgUGF0aGFrIChBbWF6b24pLiBIdWI6IGh0dHBzOi8vamFpa2hhcmJhbmRhLmdpdGh1Yi5pby9haS1pbi1hY3Rpb24vDQpFTkQ6VkVWRU5UDQpFTkQ6VkNBTEVOREFS" download="ai-in-action.ics">Add to calendar</a>
+</div></div>
+
+<div class="wrap"><div class="quick">
+  <a href="#game">Play: AI or Human?</a>
+  <a href="#prompts">Tonight&rsquo;s prompts</a>
+  <a href="#courses">Go further</a>
+</div></div>
+
+<div class="wrap">
+
+<section id="session">
+  <h2>This session</h2>
+  <p>No theory, no hype. Live demos of AI doing real work, a straight answer on what to hand off
+  and what to keep human, and a fireside conversation on what actually happens when AI meets one of the
+  world&rsquo;s largest customer-service organisations.</p>
+  <div class="card">
+    <h3 style="margin-top:0">You&rsquo;ll leave with</h3>
+    <p>&bull; A clear picture of where AI fits your work right now<br>
+    &bull; A simple rule for what to delegate to AI and what to keep<br>
+    &bull; Every prompt from tonight, on this page, ready to reuse</p>
+  </div>
+  <p><b>Speakers:</b> Jai Kharbanda (Applied AI Lead, Boom Training / Turing College) and
+  Pulaq Pathak (Head of Product &ndash; AI Knowledge Platforms, Amazon Customer Service, Global).</p>
+</section>
+
+<section id="game">
+  <h2>AI or Human?</h2>
+  <p>In each pair, one message was written by a person, one by AI. Pick, then reveal.</p>
+
+  <div class="qa"><div class="pair">
+    <div class="opt"><b>A.</b> &ldquo;Bit of a weird one, but bear with me. Last Tuesday I locked myself
+    out of the office with a client due in ten minutes. What happened next changed how I think about our
+    front-desk process.&rdquo;</div>
+    <div class="opt"><b>B.</b> &ldquo;In today&rsquo;s fast-paced digital landscape, adaptability isn&rsquo;t
+    just a buzzword &mdash; it&rsquo;s a survival skill. Here are 5 lessons every professional should
+    embrace.&rdquo;</div>
+  </div><button class="rev" onclick="rv(this)">Reveal</button>
+  <div class="ans"><b>B is the AI.</b> The tells: stock phrases, uniform enthusiasm, zero specifics.
+  The human one has a time, a place and a problem.</div></div>
+
+  <div class="qa"><div class="pair">
+    <div class="opt"><b>A.</b> &ldquo;I sincerely apologise for any inconvenience this may have caused.
+    Please rest assured that we are committed to ensuring this does not happen again.&rdquo;</div>
+    <div class="opt"><b>B.</b> &ldquo;Sorry &mdash; completely my fault, I misread the invite.
+    Can we grab 15 minutes tomorrow instead? I&rsquo;ll bring the numbers you asked for.&rdquo;</div>
+  </div><button class="rev" onclick="rv(this)">Reveal</button>
+  <div class="ans"><b>A is the AI.</b> Over-formal, apologises to nobody in particular, promises nothing
+  concrete. The human names the mistake and fixes it.</div></div>
+
+  <div class="qa"><div class="pair">
+    <div class="opt"><b>A.</b> &ldquo;We fixed the bug where exports timed out on large files.
+    If it still happens, reply here and we&rsquo;ll dig in.&rdquo;</div>
+    <div class="opt"><b>B.</b> &ldquo;We&rsquo;re thrilled to announce a suite of powerful new enhancements
+    designed to supercharge your workflow and unlock seamless productivity!&rdquo;</div>
+  </div><button class="rev" onclick="rv(this)">Reveal</button>
+  <div class="ans"><b>B is the AI.</b> &ldquo;Thrilled&rdquo;, &ldquo;supercharge&rdquo;,
+  &ldquo;seamless&rdquo; &mdash; and not one word about what changed.</div></div>
+
+  <p style="font-size:14px;color:#6F617A">The point isn&rsquo;t that AI writing is bad &mdash; it&rsquo;s that
+  <i>unedited, generic</i> AI writing is easy to spot. Tonight is about using it well instead.</p>
+</section>
+
+<section id="prompts">
+  <h2>Tonight&rsquo;s prompts</h2>
+
+  <h3>1. The one-sentence app build (Lovable)</h3>
+  <pre id="p1">Build a simple expense-splitting app for a group dinner. People add who paid for what, and the app works out who owes whom, with a one-tap settle-up summary. Mobile-first, warm colours, playful but professional. No login.</pre>
+  <button class="copybtn" onclick="cp(this,'p1')">Copy prompt</button>
+  <p style="font-size:14px;margin-top:10px">Swap the first sentence for your own idea. The same habit works in
+  Claude, ChatGPT, Gemini or Copilot &mdash; describe the outcome, not the implementation, then iterate out loud.</p>
+
+  <h3>2. Teach AI to sound like you</h3>
+  <pre id="p2">Below are three real examples of how I write (an email, a chat message, and a longer doc). Study them and describe my voice back to me: tone, sentence length, sign-offs, favourite phrases, and words I would never use. Ask me three questions about anything you can't tell from the samples. Then, from now on, draft everything in my voice.
+
+[paste your three samples here]</pre>
+  <button class="copybtn" onclick="cp(this,'p2')">Copy prompt</button>
+
+  <h3>3. The hand-off rule</h3>
+  <div class="two">
+    <div class="card"><h3 style="margin-top:0">Hand off to AI</h3>
+      <p style="font-size:14px">Repetitive and rule-based &middot; easy to check at a glance &middot; cheap to
+      get wrong once &middot; first drafts, summaries, legwork</p></div>
+    <div class="card dark"><h3>Keep human</h3>
+      <p style="font-size:14px">Judgment calls and trade-offs &middot; relationships and trust &middot; anything
+      you&rsquo;d have to apologise for &middot; the final quality bar</p></div>
+  </div>
+  <p><b>The intern test:</b> would you give the task to a bright intern on day one?
+  Then let AI take the first pass &mdash; and check it like an intern&rsquo;s work.</p>
+</section>
+
+<section id="build-story">
+  <h2>The build story</h2>
+  <p>Pulaq built a trip expense-splitting app in Lovable without writing a line of code. We&rsquo;re turning her
+  full build conversation into a short, honest product-development walkthrough &mdash; every prompt, every wrong
+  turn, and the moment it clicked.</p>
+  <div class="card"><p style="margin:0"><b>Coming right after the session:</b> the PRD-style walkthrough will be
+  published on this page. Scan the same QR again on Wednesday.</p></div>
+</section>
+
+<section id="courses">
+  <h2>Go further</h2>
+  <div class="about">
+    <img src="data:image/png;base64,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" alt="QR code to Turing College and Boom Training programmes">
+    <div style="flex:1;min-width:240px">
+      <p><b>Turing College &times; Boom Training</b> run practice-led AI and data programmes for working
+      professionals &mdash; most fully funded through the UK apprenticeship levy, which your employer may
+      already be paying without using.</p>
+      <p style="font-size:14px;color:#6F617A">All programmes: <b style="color:var(--rust)">programmes.boom-training.com</b></p>
+    </div>
+  </div>
+
+  <div class="course">
+    <h3 style="margin-top:0">AI Leadership Apprenticeship Units</h3>
+    <p style="font-size:14px">For leaders driving AI adoption. Three units, 30 delivery hours each:
+    strategy &amp; opportunity, adoption &amp; governance, delivery &amp; transformation. Hands-on with
+    Claude Code, Lovable, n8n and more.</p>
+    <p class="fund">100% levy-funded</p>
+    <a class="btn" href="https://programmes.boom-training.com/course/ai-leadership">View unit details &amp; apply</a>
+  </div>
+
+  <div class="course">
+    <h3 style="margin-top:0">Applied AI &amp; Automation (Level 4)</h3>
+    <p style="font-size:14px">~18 months. Identify where AI and automation genuinely improve the work,
+    then build and ship responsible, practical solutions.</p>
+    <p class="fund">Levy-funded</p>
+    <a class="btn ghost" href="https://programmes.boom-training.com/">Browse all programmes</a>
+  </div>
+
+  <div class="course">
+    <h3 style="margin-top:0">Data Analytics &amp; AI / AI for Business</h3>
+    <p style="font-size:14px">Level 4 and Level 3 apprenticeships, ~15 months. Turn the data you already
+    have into decisions, with AI doing the heavy lifting.</p>
+    <p class="fund">Levy-funded</p>
+    <a class="btn ghost" href="https://programmes.boom-training.com/">Browse all programmes</a>
+  </div>
+</section>
+
+<section id="next">
+  <h2>What&rsquo;s next</h2>
+  <p><b>Try one thing tomorrow:</b> hand AI one task off your list (intern test), teach it your voice
+  (prompt 2 above), or rebuild tonight&rsquo;s app with your own idea (prompt 1).</p>
+  <p><b>Stay in the loop:</b></p>
+  <a class="btn" href="https://luma.com/user/usr-hfSbN4y4L8sWHay">Join Women In Tech UK on Luma</a>
+  <a class="btn ghost" href="https://www.turingcollege.com/">Turing College</a>
+  <p style="font-size:13px;color:#6F617A;margin-top:14px">Questions about programmes or bringing a workshop like
+  this to your team? Find Jai at drinks, or reach the team via the programme pages above. If you apply, you&rsquo;re
+  sharing your details with Turing College / Boom Training for that purpose &mdash; nothing else, no spam.</p>
+</section>
+
+</div>
+
+<footer><div class="wrap">
+  <p><b>AI in Action</b> &middot; Turing College &times; Women In Tech UK &middot; 7 July 2026, London</p>
+  <p style="margin-top:6px">This page: <a href="https://jaikharbanda.github.io/ai-in-action/">jaikharbanda.github.io/ai-in-action</a> &middot; kept live after the event with
+  the build story and slides.</p>
+</div></footer>
+
+<script>
+function rv(b) { var a = b.parentElement.querySelector('.ans'); a.style.display = a.style.display === 'block' ? 'none' : 'block'; }
+function cp(b, id) {
+  var t = document.getElementById(id).innerText;
+  (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(function() {
+    b.classList.add('copied'); b.textContent = 'Copied'; setTimeout(function() { b.classList.remove('copied'); b.textContent = 'Copy prompt'; }, 1600);
+  }).catch(function() {
+    var r = document.createRange(); r.selectNode(document.getElementById(id)); var s = window.getSelection();
+    s.removeAllRanges(); s.addRange(r); document.execCommand('copy'); s.removeAllRanges();
+    b.textContent = 'Copied'; setTimeout(function() { b.textContent = 'Copy prompt'; }, 1600);
+  });
+}
+</script>
+</body>
+</html>
