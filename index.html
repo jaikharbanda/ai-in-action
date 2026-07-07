@@ -33,7 +33,7 @@ body { font-family:"Noi Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",Rob
 .scanbox { display:flex; gap:16px; align-items:center; background:#fff; color:var(--ink);
   border-radius:14px; padding:14px 16px; margin-top:22px; }
 .scanbox img { width:92px; height:92px; }
-.scanbox .u { font-weight:700; color:var(--rust); word-break:break-all; }
+.scanbox .u { font-weight:700; color:var(--rust); white-space:nowrap; }
 .quick { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:-18px auto 0; }
 .quick a { background:var(--tint); border-radius:12px; padding:14px 10px; text-align:center;
   text-decoration:none; color:var(--purple); font-weight:700; font-size:14px;
@@ -189,7 +189,7 @@ footer a { color:var(--cyan); }
       <p><b>Boom Training by Turing College</b> runs practice-led AI and data programmes for working
       professionals, fully funded through the UK apprenticeship levy, which your employer may
       already be paying without using.</p>
-      <p style="font-size:14px;color:#6F617A">All programmes: <b style="color:var(--rust)">programmes.boom-training.com</b></p>
+      <p style="font-size:14px;color:#6F617A">All programmes: <a href="https://programmes.boom-training.com/?tab=apprenticeships" style="color:var(--rust);font-weight:700">programmes.boom-training.com</a></p>
     </div>
   </div>
 
@@ -231,7 +231,6 @@ footer a { color:var(--cyan); }
   <p><b>Try one thing tomorrow:</b> hand AI one task off your list (intern test), teach it your voice
   (prompt 2 above), or rebuild tonight&rsquo;s app with your own idea (prompt 1).</p>
   <p><b>Stay in the loop:</b></p>
-  <a class="btn" href="https://luma.com/user/usr-hfSbN4y4L8sWHay">Join Women In Tech UK on Luma</a>
   <a class="btn ghost" href="https://www.turingcollege.com/">Turing College</a>
   <p style="font-size:13px;color:#6F617A;margin-top:14px">Questions about programmes or bringing a workshop like
   this to your team? Find Jai at drinks, or reach the team via the programme pages above. If you apply, you&rsquo;re
